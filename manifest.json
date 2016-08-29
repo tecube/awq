@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "awq",
+  "version": "1.0",
+
+  "description": "",
+  "icons": { "16": "images/icon16.png",
+             "48": "images/icon48.png",
+            "128": "images/icon128.png" },
+
+  "browser_action": {
+    "default_icon": { "19": "images/icon19.png" },
+    "default_title": "awq",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "https://quizlet.com/create-set/new",
+    "clipboardWrite"
+  ],
+
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+    
+  "content_scripts": [
+    {
+      "matches": [ "http://ejje.weblio.jp/content/*" ],
+      "js": [ "atWeblio.js" ]
+    }
+  ]
+}
