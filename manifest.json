@@ -28,7 +28,10 @@
     
   "content_scripts": [
     {
-      "matches": [ "http://ejje.weblio.jp/content/*" ],
+      "matches": [
+        "http://ejje.weblio.jp/content/*" ,
+        "https://ejje.weblio.jp/content/*"
+      ],
       "js": [ "atWeblio.js" ]
     }
   ]
