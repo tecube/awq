@@ -1,0 +1,2 @@
+# awq
+Weblio英和で調べた単語を記録し，quizletにインポートできるテキストに変換するchrome拡張
